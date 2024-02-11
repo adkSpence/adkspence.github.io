@@ -11,15 +11,9 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-twitter: "#"
-linkedin: "#"
-stackoverflow: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
+twitter: "adk_Spence"
+linkedin: "Spencer Apeadjei-Duodu"
+github: "adkSpence"
 
 
 # Markdown
