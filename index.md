@@ -7,15 +7,4 @@ profile:
 published: true
 ---
 
-[Gradfolio](https://github.com/jitinnair1/gradfolio){:target="_blank"} is a responsive, dark-mode ready Jekyll theme designed keeping academia in mind. The easiest way to install the theme is to fork it using GitHub. Check the README file for [instructions](https://github.com/jitinnair1/gradfolio#installation){:target="_blank"}.
-
-If you want to use this space to write your biography here, edit the `index.md` file. You can put a picture in, too. Rename your picture to `profile.png` and put it in the `assets/images/` folder.
-
-The social-icons footer can be used to link profiles from GitHub, OrcID and ReasearchGate aprart form the usual Twitter, LinkedIn and Facebook. You can add your user ID in the `_config.yml` file to link your accounts.
-
-PS: If you liked the theme, do star it on GitHub!
-
-### Also, check out:
-
-- [autoCV](https://github.com/jitinnair1/autocv) - a LaTeX template that builds and deploys the CV using GitHub Actions, so you will always have a ready link for your latest CV
-- [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog
+Embarking on a Master's in Artificial Intelligence Engineering as a [DAAD Leadership for Africa](https://www.daad.de/en/the-daad/what-we-do/sustainable-development/funding-programmes/funding-programmes-for-students-a-z/leadership-for-africa/){:target="_blank"} has been a fulfilling and exciting journey in my life. My passion for AI and Software Engineering was sparked by the ingenuity of [Liftware](https://www.liftware.com/){:target="_blank"} in helping persons with Parkinson's disease eat with confidence during my Information Technology undergradate at [Ghana Communication Technology University](https://site.gctu.edu.gh/){:target="_blank"}.This journey is not just about technological innovation but also about contributing my quota in making the world a better place.
