@@ -3,7 +3,7 @@
 title: Apeadjei-Duodu, Spencer
 description: M.Sc Artificial Intelligence Engineering | Universität Passau
 
-email: #
+email: apeadj01@ads.uni-passau.de
 
 # Pagination
 paginate: 4
@@ -41,7 +41,7 @@ collections:
     permalink: /projects/:name/
     order:
       - shortProject.md
-      - longerProjectTitle.md
+      - abscondo.md
       - redirect.md
       - project4.md
       - project5.md
