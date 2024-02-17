@@ -1,12 +1,10 @@
 ---
 layout: post
 title: A Hybrid Cryptographic System based on Diffie-Hellman Key Exchange and Triple DES Algorithm
-description: Abscondo is a journalling app I built where users can encrypt their secrets thoughts 
+description: Abscondo is a journalling app I built where users can encrypt their secrets thoughts 😉
 ---
 
-Example modified from [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html){:target="_blank"}.
-
-H1 Header
+Abscondo: Encrypt and Decrypt secret notes
 ============
 
 Paragraphs are separated by a blank line.
