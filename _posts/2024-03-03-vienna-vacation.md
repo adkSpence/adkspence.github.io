@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Waltzing Through Vienna - 3-Day Sojourn
+title: Waltzing Through Vienna: 3-Day Sojourn
 ---
 
 Ever since I moved to Europe for my master's, the continent's rich history, diverse cultures, and breathtaking landscapes have been calling out to me, beckoning me to explore.
