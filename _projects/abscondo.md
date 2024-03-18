@@ -16,9 +16,14 @@ Table of Content:
   * Future Work
   * Conclusion
 
+DEMO
+---
+
 INTRODUCTION
 ---
 > In the world of information security, the mathematician holds the key. The essence of cryptography is less about hiding information from prying eyes and more about the art of ensuring that the eyes meant to see it can do so unimpeded.
+
+Okay, before we dive in, let's address the elephant in the room: "Abscondo"? Yes!!! In Latin, "Abscondo" means to hide, conceal, cover, or shroud. It comes from the Latin words "abs-" meaning "from, away from" and "condō" meaning "to conceal, hide". Why did we fall in love with the name? Well, who would't? 😏
 
 In the digital age, where data traverses the globe in the blink of an eye, the sanctity of information has never been more paramount. As we exchange bytes over the vast, open wilderness of the Internet, the invisible threads that secure these exchanges become the lifelines of our privacy and security. Enter the realm of cryptography: a discipline as ancient as it is pivotal in our modern world, evolving continuously to protect our most precious asset—information.
 
