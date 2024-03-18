@@ -19,6 +19,10 @@ Table of Content:
 DEMO
 ---
 
+[![Abscondo Video Demo]](https://www.dropbox.com/scl/fi/rkiqbbv64f991f0od8nc4/demo.mp4?rlkey=py8tdczdfx3ftwynl3zxxd1kk&dl=0)
+
+***
+
 INTRODUCTION
 ---
 > In the world of information security, the mathematician holds the key. The essence of cryptography is less about hiding information from prying eyes and more about the art of ensuring that the eyes meant to see it can do so unimpeded.
