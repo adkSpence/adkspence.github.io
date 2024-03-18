@@ -5,7 +5,6 @@ description: Abscondo is a journalling app I built where users can encrypt and d
 ---
 
 A Hybrid Cryptographic System based on Diffie-Hellman Key Exchange and Triple DES Algorithms
-============
 
 Table of Content:
 ---
@@ -27,4 +26,4 @@ This blog post delves into the intricate dance of cryptographic algorithms. At t
 
 Join me and my esteemed colleague, Pimpa Akuffo Sophia, as we delve into the intricacies of this cryptographic duet, the cornerstone of our final year undergraduate project. Our endeavor simulates a secure journal application, demonstrating the practical application of the hybrid combination of both algorithms within a single, unified platform. This simulation not only showcases the robustness of combining asymmetric and symmetric encryption methods but also illustrates how such a hybrid system can be ingeniously applied to everyday digital tools like a personal journal app.
 
-`This simulation ensures that even if unauthorized access to one's password or a direct attack on the database were to occur, the stored information would remain an unintelligible jumble of characters, safeguarded by the robust encryption of Triple DES.`
+**This simulation ensures that even if unauthorized access to one's password or a direct attack on the database were to occur, the stored information would remain an unintelligible jumble of characters, safeguarded by the robust encryption of Triple DES.**
