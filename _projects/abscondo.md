@@ -9,9 +9,9 @@ A Hybrid Cryptographic System based on Diffie-Hellman Key Exchange and Triple DE
 Table of Content:
 ---
 
-  * Demo
-  * Introduction
-  * Overview of Algorithms
+  * [Demo](#demo)
+  * [Introduction](#introduction)
+  * [Overview of Algorithms](#overview-of-algorithms-sharing-secrets-and-keeping-messages-safe)
   * System Architecture
   * Future Work
   * Conclusion
@@ -37,3 +37,12 @@ This blog post delves into the intricate dance of cryptographic algorithms. At t
 Join me and my esteemed colleague, Pimpa Akuffo Sophia, as we delve into the intricacies of this cryptographic duet, the cornerstone of our final year undergraduate project. Our endeavor simulates a secure journal application, demonstrating the practical application of the hybrid combination of both algorithms within a single, unified platform. This simulation not only showcases the robustness of combining asymmetric and symmetric encryption methods but also illustrates how such a hybrid system can be ingeniously applied to everyday digital tools like a personal journal app.
 
 **This simulation ensures that even if unauthorized access to one's password or a direct attack on the database were to occur, the stored information would remain an unintelligible jumble of characters, safeguarded by the robust encryption of Triple DES.**
+
+OVERVIEW OF ALGORITHMS: Sharing Secrets and Keeping Messages Safe
+---
+Imagine you have a secret clubhouse, and you want to send secret messages to your friend. But, oh no! You have to make sure no one else can read them. How do you do it? Well, it's a bit like sharing a secret handshake, and we have two special ways to keep our club's messages super-secret.
+
+    1. The Secret Handshake: *Diffie-Hellman Key Exchange*
+        The first algorithm we discuss is called Diffie-Hellman Key Exchange. It's like creating a secret handshake, but even if someone sees you doing it, they still can't guess the secret! It's a clever trick where you and your friend both pick a special number, mix it with your club's secret number, and then swap the results. But here's the magical part: you both end up with the `same secret number` at the end without ever having to whisper it directly to each other. This algorithm falls under the category of `asymmetric encryption algorithms`. What this means is that: one key to encrypt the data (the public key) and another key to decrypt it (the private key). These keys are mathematically linked—whatever is encrypted with the public key can only be decrypted with the corresponding private key, and vice versa. In the case of our Secret Clubhouse analogy, one is a public key that everyone can see (like waving hello), and the other is a private key that only you know (like the secret handshake itself).
+
+        
