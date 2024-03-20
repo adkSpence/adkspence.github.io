@@ -12,9 +12,8 @@ Table of Content:
   * [Demo](#demo)
   * [Introduction](#introduction)
   * [Overview of Algorithms](#overview-of-algorithms-sharing-secrets-and-keeping-messages-safe)
-  * System Architecture
-  * Future Work
-  * Conclusion
+  * [System Architecture](#system-architecture)
+  * [Conclusion](#conclusion)
 
 DEMO
 ---
@@ -127,3 +126,50 @@ So, how do we use these two methods for our clubhouse? First, we do our secret h
 It's like having an invisible cloak for your messages, making sure they stay just between you and your friend, safe and sound. And that's how our clubhouse keeps its secrets super-secret!
 
 In our journal app, the Diffie-Hellman Key Exchange is used conceptually to illustrate how a shared secret key can be generated in a secure manner. This shared secret is then utilized within the app as the symmetric key for Triple DES encryption, ensuring that journal entries are encrypted and can only be decrypted by someone with access to the secret key.
+
+SYSTEM ARCHITECTURE
+---
+The application written in `Java 10`, is built on the Model-View-Controller (MVC) architecture, ensuring a clear separation of concerns, enhancing maintainability, and facilitating scalability. Here's how each component contributes to the application's architecture:
+
+1. [x] **Model Layer:** The model layer, pivotal to our application's cryptographic functionality, encompasses classes responsible for cryptographic operations and database interactions. Notably: Cryptographic Components and Database Interaction.
+
+2. [x] **View:** The view layer is designed with user experience in mind, providing intuitive and responsive interfaces for user interaction.
+
+3. [x] **Controllers:** Controllers act as the intermediary between the model and view, handling user input and application logic.
+
+### **Models** ###
+
+#### Cryptographic Components ####
+* **DiffieHellman.java:** Serves as the bedrock for secure key generation. Unlike traditional implementations where two parties actively participate in the exchange, our application simulates the joint derivation of a shared secret within a singular environment, catering to the unique requirements of a personal journal application where networked exchange does not occur. The `PrimeNumbers.java class` is tasked with the generation of cryptographically strong prime numbers, which serve as the global public parameters for the DHKE process. Following closely, the `PrimeRoots.java class` steps in to identify suitable primitive roots of the prime numbers, a critical step in ensuring the robustness of the key exchange process.
+
+* **TransformEngine.java:** Upon generating the shared secret, the TransformEngine receives this shared secret. It then transforms this secret into a robust key, compatible with the Triple DES (3DES) algorithm's stringent requirements. This transformation begins with the shared secret being passed through an MD5 hashing algorithm. The result is a digest that ensures consistency in length and format, providing a solid foundation for key construction. To meet the 3DES requirement for a 24-byte key (192 bits, accommodating two-key or three-key 3DES configurations), the engine takes the 16-byte MD5 hash and appends the first 8 bytes of the hash to itself, thereby crafting a key that perfectly fits the algorithm's demands.
+
+#### Database Interaction: #### The database interaction plays a crucial role, ensuring that data persistence and security are seamlessly integrated. We save user details, as well as the different Journal entries. The key thing here is that we persist the encrypted version of the entries to the database. We use SQLite in this project.
+
+### **Views** ###
+The `Views` play a crucial role in presenting the user interface, enabling users interact with the application. The Views are designed to offer an intuitive and engaging user experience, seamlessly integrating with the Controllers to bring the application's functionality to life. Scene Builder 10 was used in designing the UI. Using Scene Builder allowed for rapid and easy development as compared to attempting to write the FXML files ourselves. The UI elements include:
+
+* **Signup Screen**: warmly welcomes new users to create their accounts, with the added security measure of choosing a security question for future password recovery.
+* **Login Screen**: presents a user-friendly portal for returning users, providing swift access to their secure journal space. Should users forget their passwords, the Forgot Password Screen offers a secure and straightforward password reset process, contingent upon correctly answering their chosen security question.
+* **Forgot Password Screen**: allows users to reset their passwords.
+* **Home Screen:**
+  - _Encryption Tab:_ users can enter their message, choose their secret key number from a dropdown, and upon clicking 'ENCRYPT', the cipher text is displayed. This simplicity ensures that the user's experience is straightforward and efficient.
+  - _Decryption Tab:_ there’s an added option to enable modifications, where can not only decrypt their entries but also edit and update or even delete them as needed. The 'DECRYPT' button allows users to seamlessly through the Entry title and secret key return their encrypted messages back to plain text.
+
+### **Controllers** ###
+The controllers in the application act as the central command, orchestrating the flow between the user interface and the underlying data model:
+
+* **SignupController:** Handles new user registrations, ensuring credentials are securely stored along with a chosen security question and answer for account recovery.
+
+* **LoginController:** Manages user logins, authenticating credentials against the database, and provides access to the encrypted journal entries.
+
+* **HomeController:** Oversees the core functionalities of encryption and decryption, interacting with the TransformEngine to process journal entries and update the UI accordingly.
+
+* **ForgotPasswordController:** Assists users in resetting forgotten passwords by verifying their identity through security questions.
+
+Each controller is finely tuned to perform its specific role, ensuring the application runs smoothly, securely, and is user-friendly.
+
+CONCLUSION
+---
+Our project took a non-traditional approach by simulating the Diffie-Hellman Key Exchange (DHKE) within a single-user context, rather than utilizing it for key exchange over a network as is its conventional use. This creative adaptation showcases our project's innovative spirit, tailoring complex cryptographic protocols to fit the unique needs of a personal journal application
+In wrapping up our exploration of blending the Diffie-Hellman Key Exchange with Triple DES, we've ventured through a blend of asymmetric and symmetric encryption to bolster digital security. This hybrid approach not only showcases the evolution of cryptographic practices but also reaffirms the critical role of encryption in our digital lives. As we advance, drawing inspiration from the past and looking ahead, the journey of enhancing data protection continues. This blog merely scratches the surface, encouraging us to stay curious and proactive in navigating the digital security landscape.
