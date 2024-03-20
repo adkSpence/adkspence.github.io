@@ -118,7 +118,7 @@ Now, the second method is called Triple DES. Think of it as a secret box with a 
 3. Output:
    - plaintext: The original data, after reversing the Triple DES encryption.
 ~~~
-NB: This pseudocode abstracts away the details of the DES algorithm and assumes the existence of DES_Encrypt and DES_Decrypt functions which perform DES encryption and decryption respectively. It also doesn't address padding, mode of operation, or initialization vectors (IVs) which are important for real-world implementations.
+NB: This pseudocode abstracts away the details of the DES algorithm and assumes the existence of DES_Encrypt and DES_Decrypt functions which perform DES encryption and decryption respectively. It also doesn't address padding, mode of operation, or initialization vectors (IVs) which are also important for real-world implementations. More info on them in the System Architecture section.
 
 ### **Working Together** ###
 So, how do we use these two methods for our clubhouse? First, we do our secret handshake using Diffie-Hellman to create a secret key that only you and your friend know. Then, you use that key to lock your message in the Triple DES secret box. Now, you can send your secret message across the playground, and even if someone else finds it, they can't open the box and read it!
@@ -144,7 +144,8 @@ The application written in `Java 10`, is built on the Model-View-Controller (MVC
 
 * **TransformEngine.java:** Upon generating the shared secret, the TransformEngine receives this shared secret. It then transforms this secret into a robust key, compatible with the Triple DES (3DES) algorithm's stringent requirements. This transformation begins with the shared secret being passed through an MD5 hashing algorithm. The result is a digest that ensures consistency in length and format, providing a solid foundation for key construction. To meet the 3DES requirement for a 24-byte key (192 bits, accommodating two-key or three-key 3DES configurations), the engine takes the 16-byte MD5 hash and appends the first 8 bytes of the hash to itself, thereby crafting a key that perfectly fits the algorithm's demands.
 
-#### Database Interaction: #### The database interaction plays a crucial role, ensuring that data persistence and security are seamlessly integrated. We save user details, as well as the different Journal entries. The key thing here is that we persist the encrypted version of the entries to the database. We use SQLite in this project.
+#### Database Interaction ####
+The database interaction plays a crucial role, ensuring that data persistence and security are seamlessly integrated. We save user details, as well as the different Journal entries. The key thing here is that we persist the encrypted version of the entries to the database. We use SQLite in this project.
 
 ### **Views** ###
 The `Views` play a crucial role in presenting the user interface, enabling users interact with the application. The Views are designed to offer an intuitive and engaging user experience, seamlessly integrating with the Controllers to bring the application's functionality to life. Scene Builder 10 was used in designing the UI. Using Scene Builder allowed for rapid and easy development as compared to attempting to write the FXML files ourselves. The UI elements include:
@@ -171,5 +172,6 @@ Each controller is finely tuned to perform its specific role, ensuring the appli
 
 CONCLUSION
 ---
-Our project took a non-traditional approach by simulating the Diffie-Hellman Key Exchange (DHKE) within a single-user context, rather than utilizing it for key exchange over a network as is its conventional use. This creative adaptation showcases our project's innovative spirit, tailoring complex cryptographic protocols to fit the unique needs of a personal journal application
+Our project took a non-traditional approach by simulating the Diffie-Hellman Key Exchange (DHKE) within a single-user context, rather than utilizing it for key exchange over a network as is its conventional use. This creative adaptation showcases our project's innovative spirit, tailoring complex cryptographic protocols to fit the unique needs of a personal journal application.
+
 In wrapping up our exploration of blending the Diffie-Hellman Key Exchange with Triple DES, we've ventured through a blend of asymmetric and symmetric encryption to bolster digital security. This hybrid approach not only showcases the evolution of cryptographic practices but also reaffirms the critical role of encryption in our digital lives. As we advance, drawing inspiration from the past and looking ahead, the journey of enhancing data protection continues. This blog merely scratches the surface, encouraging us to stay curious and proactive in navigating the digital security landscape.
