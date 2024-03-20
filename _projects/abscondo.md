@@ -131,7 +131,7 @@ SYSTEM ARCHITECTURE
 ---
 The application written in `Java 10`, is built on the Model-View-Controller (MVC) architecture, ensuring a clear separation of concerns, enhancing maintainability, and facilitating scalability. Here's how each component contributes to the application's architecture:
 
-1. **Model Layer:** The model layer, pivotal to our application's cryptographic functionality, encompasses classes responsible for cryptographic operations and database interactions. Notably: Cryptographic Components and Database Interaction.
+1. **Model Layer:** The model layer, pivotal to our application's cryptographic functionality, encompasses classes responsible for cryptographic operations and database interactions.
 
 2. **View:** The view layer is designed with user experience in mind, providing intuitive and responsive interfaces for user interaction.
 
@@ -175,3 +175,9 @@ CONCLUSION
 Our project took a non-traditional approach by simulating the Diffie-Hellman Key Exchange (DHKE) within a single-user context, rather than utilizing it for key exchange over a network as is its conventional use. This creative adaptation showcases our project's innovative spirit, tailoring complex cryptographic protocols to fit the unique needs of a personal journal application.
 
 In wrapping up our exploration of blending the Diffie-Hellman Key Exchange with Triple DES, we've ventured through a blend of asymmetric and symmetric encryption to bolster digital security. This hybrid approach not only showcases the evolution of cryptographic practices but also reaffirms the critical role of encryption in our digital lives. As we advance, drawing inspiration from the past and looking ahead, the journey of enhancing data protection continues. This blog merely scratches the surface, encouraging us to stay curious and proactive in navigating the digital security landscape.
+
+CREDITS
+---
+* **Prof. Dr. Kester Quist Aphetsi:** whose proven expertise in Cryptography and coaching inspired the foundational concept of this project.
+* **Mr. Eugene Badzongoly:** our supervisor who guided us through the intricacies of writing out the research.
+* **Stackoverflow:** The sweet days 😂 before the age of LLMs. Grateful for all the contributions and advice the users gave.
