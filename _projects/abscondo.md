@@ -131,11 +131,11 @@ SYSTEM ARCHITECTURE
 ---
 The application written in `Java 10`, is built on the Model-View-Controller (MVC) architecture, ensuring a clear separation of concerns, enhancing maintainability, and facilitating scalability. Here's how each component contributes to the application's architecture:
 
-1. [x] **Model Layer:** The model layer, pivotal to our application's cryptographic functionality, encompasses classes responsible for cryptographic operations and database interactions. Notably: Cryptographic Components and Database Interaction.
+1. **Model Layer:** The model layer, pivotal to our application's cryptographic functionality, encompasses classes responsible for cryptographic operations and database interactions. Notably: Cryptographic Components and Database Interaction.
 
-2. [x] **View:** The view layer is designed with user experience in mind, providing intuitive and responsive interfaces for user interaction.
+2. **View:** The view layer is designed with user experience in mind, providing intuitive and responsive interfaces for user interaction.
 
-3. [x] **Controllers:** Controllers act as the intermediary between the model and view, handling user input and application logic.
+3. **Controllers:** Controllers act as the intermediary between the model and view, handling user input and application logic.
 
 ### **Models** ###
 
