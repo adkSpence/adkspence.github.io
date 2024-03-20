@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ABSCONDO - Journal App
-description: Abscondo is a journalling app I built where users can encrypt and decrypt information
+description: Abscondo is a journalling app where users can encrypt and decrypt information
 ---
 
 A Hybrid Cryptographic System based on Diffie-Hellman Key Exchange and Triple DES Algorithms
