@@ -126,4 +126,4 @@ So, how do we use these two methods for our clubhouse? First, we do our secret h
 
 It's like having an invisible cloak for your messages, making sure they stay just between you and your friend, safe and sound. And that's how our clubhouse keeps its secrets super-secret!
 
-In our journal app, the Diffie-Hellman Key Exchange is used conceptually to illustrate how a shared secret key can be generated in a secure manner. This shared secret is then utilized within your app as the symmetric key for Triple DES encryption, ensuring that journal entries are encrypted and can only be decrypted by someone with access to the secret key.
+In our journal app, the Diffie-Hellman Key Exchange is used conceptually to illustrate how a shared secret key can be generated in a secure manner. This shared secret is then utilized within the app as the symmetric key for Triple DES encryption, ensuring that journal entries are encrypted and can only be decrypted by someone with access to the secret key.
