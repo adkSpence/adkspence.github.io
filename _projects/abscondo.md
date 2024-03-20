@@ -42,37 +42,37 @@ OVERVIEW OF ALGORITHMS: Sharing Secrets and Keeping Messages Safe
 ---
 Imagine you have a secret clubhouse, and you want to send secret messages to your friend. But, oh no! You have to make sure no one else can read them. How do you do it? Well, it's a bit like sharing a secret handshake, and we have two special ways to keep our club's messages super-secret.
 
-    1. The Secret Handshake: *Diffie-Hellman Key Exchange*
+1. The Secret Handshake: *Diffie-Hellman Key Exchange*
         The first algorithm we discuss is called Diffie-Hellman Key Exchange. It's like creating a secret handshake, but even if someone sees you doing it, they still can't guess the secret! It's a clever trick where you and your friend both pick a special number, mix it with your club's secret number, and then swap the results. But here's the magical part: you both end up with the `same secret number` at the end without ever having to whisper it directly to each other. This algorithm falls under the category of `asymmetric encryption algorithms`. What this means is that: one key to encrypt the data (the public key) and another key to decrypt it (the private key). These keys are mathematically linked—whatever is encrypted with the public key can only be decrypted with the corresponding private key, and vice versa. In the case of our Secret Clubhouse analogy, one is a public key that everyone can see (like waving hello), and the other is a private key that only you know (like the secret handshake itself).
 
-        ### Simplified Pseudocode ###
-        ~~~
-        1. Choose two prime numbers:
-           - p (a large prime number)
-           - g (a primitive root modulo p, also known as a generator)
-        
-           2. Alice generates her private key:
-              - a (Alice's private key, chosen randomly)
-        
-           3. Bob generates his private key:
-              - b (Bob's private key, chosen randomly)
-        
-           4. Alice calculates her public key:
-              - A = g^a mod p
-              (Alice raises g to the power of a and then takes the modulo p of the result to get her public key A)
-        
-           5. Bob calculates his public key:
-              - B = g^b mod p
-              (Bob raises g to the power of b and then takes the modulo p of the result to get his public key B)
-        
-           6. Alice and Bob exchange their public keys (A and B) over an insecure channel.
-        
-           7. Alice computes the shared secret using Bob's public key:
-              - s = B^a mod p
-              (Alice raises Bob's public key B to the power of her private key a and takes the modulo p of the result to get the shared secret s)
-        
-           8. Bob computes the shared secret using Alice's public key:
-              - s = A^b mod p
-              (Bob raises Alice's public key A to the power of his private key b and takes the modulo p of the result to get the shared secret s)
-        ~~~
-        At this point, both Alice and Bob have computed the same shared secret s, which can be used as a key for further symmetric encryption. The security of Diffie-Hellman Key Exchange lies in the difficulty of the Discrete Logarithm Problem, making it computationally infeasible for an eavesdropper to derive the shared secret without knowing the private keys.
+### Simplified Pseudocode ###
+~~~
+1. Choose two prime numbers:
+   - p (a large prime number)
+   - g (a primitive root modulo p, also known as a generator)
+
+   2. Alice generates her private key:
+      - a (Alice's private key, chosen randomly)
+
+   3. Bob generates his private key:
+      - b (Bob's private key, chosen randomly)
+
+   4. Alice calculates her public key:
+      - A = g^a mod p
+      (Alice raises g to the power of a and then takes the modulo p of the result to get her public key A)
+
+   5. Bob calculates his public key:
+      - B = g^b mod p
+      (Bob raises g to the power of b and then takes the modulo p of the result to get his public key B)
+
+   6. Alice and Bob exchange their public keys (A and B) over an insecure channel.
+
+   7. Alice computes the shared secret using Bob's public key:
+      - s = B^a mod p
+      (Alice raises Bob's public key B to the power of her private key a and takes the modulo p of the result to get the shared secret s)
+
+   8. Bob computes the shared secret using Alice's public key:
+      - s = A^b mod p
+      (Bob raises Alice's public key A to the power of his private key b and takes the modulo p of the result to get the shared secret s)
+~~~
+At this point, both Alice and Bob have computed the same shared secret s, which can be used as a key for further symmetric encryption. The security of Diffie-Hellman Key Exchange lies in the difficulty of the Discrete Logarithm Problem, making it computationally infeasible for an eavesdropper to derive the shared secret without knowing the private keys.
