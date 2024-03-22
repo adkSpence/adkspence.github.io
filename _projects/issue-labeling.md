@@ -1,5 +1,7 @@
 ---
 layout: post
-title: Issue Labeling with Random Forest Classifier
-description: At its heart, the classifier is trained using a Random Forest algorithm to sort software development issues into categories {bugs, questions, or enhancements}
+title: Issue Labeling with Adaptive Random Forest Classifier
+description: Automatically sort software development issues into categories {bugs, questions, or enhancements}
 ---
+
+Updates soon to come...
